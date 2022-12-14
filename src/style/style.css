@@ -1,0 +1,48 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+* {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+:root {
+    --color-white: #fff;
+}
+
+.offcanvas-title {
+    color: var(--color-white);
+}
+
+.input-group-text {
+    min-width: 120px;
+}
+
+.coments {
+    max-width: 650px;
+    max-height: 40px;
+    overflow-y: overlay;
+}
+
+.list-of-clients {
+    max-height: 60vh;
+    overflow: overlay;
+    border: 3px double #838383;
+}
+
+.list-orders {
+    max-height: 22vh;
+    overflow: overlay;
+    border: 3px double #838383;
+}
+
+/* .list-of-clients table thead tr{
+    position: fixed;
+    width: 100%;
+} */
+
+.myFont {
+    font-Size: 28px;
+}
