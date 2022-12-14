@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom"
 const Auth = observer(() => {
     const {user} = useContext(Context)
     const location = useLocation()
-    const isLogin = true //location.pathname === LOGIN_ROUTE // Захаркодил чтобы только вход можно было делать, регистрацию вручную в БД
+    const isLogin = location.pathname === LOGIN_ROUTE // Захаркодил чтобы только вход можно было делать, регистрацию вручную в БД
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const navigate = useNavigate()
@@ -68,15 +68,15 @@ const Auth = observer(() => {
                         type={"password"}
                     />
 
-                        {/*{ isLogin ?*/}
-                        {/*    <div>*/}
-                        {/*        Нет аккаунта?  <NavLink to={REGISTRATION_ROUTE}>Регистрация</NavLink>*/}
-                        {/*    </div>*/}
-                        {/*    :*/}
-                        {/*    <div>*/}
-                        {/*        Есть аккаунт?  <NavLink to={LOGIN_ROUTE}>Войдите</NavLink>*/}
-                        {/*    </div>*/}
-                        {/*}*/}
+                        { isLogin ?
+                            <div>
+                                Нет аккаунта?  <NavLink to={REGISTRATION_ROUTE}>Регистрация</NavLink>
+                            </div>
+                            :
+                            <div>
+                                Есть аккаунт?  <NavLink to={LOGIN_ROUTE}>Войдите</NavLink>
+                            </div>
+                        }
 
 
                         <Button
